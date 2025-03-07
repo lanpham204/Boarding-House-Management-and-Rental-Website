@@ -17,8 +17,17 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-
-     
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 253360282070-rq32q8kdkguekjf3qbp859m799hm6pg2.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
   servlet:
     multipart:
       enabled: true
